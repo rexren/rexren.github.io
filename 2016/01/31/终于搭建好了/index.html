@@ -2,18 +2,17 @@
 <p>github 默认使用基于Ruby的Jekyll作为pages引擎，通过一些资料，发现更好用的是基于node.js的Hexo更适合我这种不想太多折腾的人使用。</p>
 <p>More info: <a href="https://hexo.io" target="_blank" rel="external">Hexo</a></p>
 <p>过程在各个网站上都可以找到，不是很复杂，简单的说下流程，PS 我用的是Mac：</p>
-<p>###安装hexo<br>hexo是基于node.js的，安装好node.js后，会默认安装npm，在控制台下输入</p>
+<h3 id="u5B89_u88C5hexo"><a href="#u5B89_u88C5hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>hexo是基于node.js的，安装好node.js后，会默认安装npm，在控制台下输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
 <p>便会在全局环境下安装hexo，通过如下语句可验证是否安装成功</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br></pre></td></tr></table></figure>
 <p>成功会返回当前版本号。</p>
-<p>###创建站点<br>使用hexo创建站点只需要一句话</p>
+<h3 id="u521B_u5EFA_u7AD9_u70B9"><a href="#u521B_u5EFA_u7AD9_u70B9" class="headerlink" title="创建站点"></a>创建站点</h3><p>使用hexo创建站点只需要一句话</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init 站点名称</span><br></pre></td></tr></table></figure>
-<p>###新建文章</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"新文章名"</span></span><br></pre></td></tr></table></figure>
+<h3 id="u65B0_u5EFA_u6587_u7AE0"><a href="#u65B0_u5EFA_u6587_u7AE0" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"新文章名"</span></span><br></pre></td></tr></table></figure>
 <h3 id="u672C_u5730_u6D4B_u8BD5_u8FD0_u884C"><a href="#u672C_u5730_u6D4B_u8BD5_u8FD0_u884C" class="headerlink" title="本地测试运行"></a>本地测试运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><p>我使用的是github作为发布点，先注册一个用户，并创建一个name.github.io的repository，然后在hexo的配置文件_config.yml找到deploy一行，在type栏填写git，在repo栏写git地址，比如我的就是</p>
+<h3 id="u751F_u6210_u9759_u6001_u7AD9_u70B9"><a href="#u751F_u6210_u9759_u6001_u7AD9_u70B9" class="headerlink" title="生成静态站点"></a>生成静态站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="u53D1_u5E03_uFF01"><a href="#u53D1_u5E03_uFF01" class="headerlink" title="发布！"></a>发布！</h3><p>我使用的是github作为发布点，先注册一个用户，并创建一个name.github.io的repository，然后在hexo的配置文件_config.yml找到deploy一行，在type栏填写git，在repo栏写git地址，比如我的就是</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy:&#10;  type: git&#10;  repo: https://github.com/rexren/rexren.github.io.git</span><br></pre></td></tr></table></figure>
 <p>完成以上工作后输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
